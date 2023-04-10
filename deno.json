@@ -1,0 +1,17 @@
+{
+  "imports": {
+    "npm/": "https://unpkg.com/"
+  },
+  "tasks": {
+    "dev": "deno run --allow-net --allow-read --allow-write --allow-env src/server.ts",
+    "build": "deno bundle src/server.ts dist/server.js",
+    "test": "deno test --allow-net --allow-read --allow-write --allow-env "
+  },
+  "fmt": {
+    "options": {
+      "singleQuote": true,
+      "indentWidth": 2,
+      "proseWrap": "always"
+    }
+  }
+}
