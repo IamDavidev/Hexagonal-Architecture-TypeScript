@@ -27,8 +27,10 @@ export class Api implements ForAuthenticating {
 
     return {
       ...userDetails,
-      ...userPermissions,
       ...user,
+      permissions: {
+        ...userPermissions,
+      },
     };
   }
 
@@ -47,8 +49,10 @@ export class Api implements ForAuthenticating {
 
     return {
       ...userDetails,
-      ...userPermissions,
       ...newUser,
+      permissions: {
+        ...userPermissions,
+      },
     };
   }
 }
