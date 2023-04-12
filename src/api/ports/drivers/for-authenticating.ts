@@ -1,9 +1,12 @@
+import { Permissions } from '../drivens/for-control-authenticating.ts';
+
 export interface AuthenticatedUser {
   id: string;
   name: string;
   email: string;
   token: string;
   refreshToken: string;
+  permissions: Permissions;
 }
 
 // export type User = Omit<AuthenticatedUser, 'id' | 'token' | 'refreshToken'>;
