@@ -4,7 +4,7 @@ import { describe, it } from 'https://deno.land/std@0.183.0/testing/bdd.ts';
 import { ControlAuthenticatorStub } from '../../src/api/adapters/drivens/contol-authenticator-stub.adapter.ts';
 import { ControlQuerierStub } from '../../src/api/adapters/drivens/repository-querier.stub.adapter.ts';
 import { Api } from '../../src/api/app/main.ts';
-import { AuthenticatedUser } from '../../src/api/ports/drivers/for-authenticating.ts';
+import { AuthenticatedUser } from '../../src/api/app/schemas/user.schema.ts';
 
 describe('api Integration', () => {
   const controlAuthenticator = new ControlAuthenticatorStub();

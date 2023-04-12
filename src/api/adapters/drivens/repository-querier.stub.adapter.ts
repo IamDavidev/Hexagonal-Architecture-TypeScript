@@ -1,6 +1,6 @@
 import { User as UserModelRepository } from '../../../repository/app/models/user.model.ts';
+import { User } from '../../app/schemas/user.schema.ts';
 import { ForRepositoryQuerying } from '../../ports/drivens/for-repository-querying.ts';
-import { User } from '../../ports/drivers/for-authenticating.ts';
 
 const UserMock: UserModelRepository = {
   id: 'id',

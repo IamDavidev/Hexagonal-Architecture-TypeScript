@@ -1,10 +1,7 @@
 import { ForControlAuthenticating } from '../ports/drivens/for-control-authenticating.ts';
 import { ForRepositoryQuerying } from '../ports/drivens/for-repository-querying.ts';
-import {
-  AuthenticatedUser,
-  ForAuthenticating,
-  User,
-} from '../ports/drivers/for-authenticating.ts';
+import { ForAuthenticating } from '../ports/drivers/for-authenticating.ts';
+import { AuthenticatedUser, User } from './schemas/user.schema.ts';
 
 export class Api implements ForAuthenticating {
   constructor(

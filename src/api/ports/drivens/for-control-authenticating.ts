@@ -1,4 +1,4 @@
-import { AuthenticatedUser } from '../drivers/for-authenticating.ts';
+import { AuthenticatedUser } from '../../app/schemas/user.schema.ts';
 
 export type AuthDetails = Pick<AuthenticatedUser, 'token' | 'refreshToken'>;
 
