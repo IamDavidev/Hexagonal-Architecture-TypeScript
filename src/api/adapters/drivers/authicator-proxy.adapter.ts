@@ -1,9 +1,6 @@
 import { Api } from '../../app/main.ts';
-import {
-  AuthenticatedUser,
-  ForAuthenticating,
-  User,
-} from '../../ports/drivers/for-authenticating.ts';
+import { AuthenticatedUser, User } from '../../app/schemas/user.schema.ts';
+import { ForAuthenticating } from '../../ports/drivers/for-authenticating.ts';
 
 export class AuthenticatorProxyAdapter implements ForAuthenticating {
   constructor(

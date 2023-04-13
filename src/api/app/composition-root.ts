@@ -3,7 +3,7 @@ import { ControlQuerierStub } from '../adapters/drivens/repository-querier.stub.
 import { AuthenticatorProxyAdapter } from '../adapters/drivers/authicator-proxy.adapter.ts';
 import { Api } from './main.ts';
 
-export const CompositionRoot = () => {
+export const CompositionRootMock = () => {
   const controlAuthenticator = new ControlAuthenticatorStub();
   const repositoryQuerier = new ControlQuerierStub();
 

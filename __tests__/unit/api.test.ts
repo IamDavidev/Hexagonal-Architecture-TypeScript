@@ -17,7 +17,7 @@ describe('api Integration', () => {
 
   it('should be login user correctly', async () => {
     /**
-     * [ Given ]
+     * [ @Given ]
      */
 
     const mockedUser = {
@@ -56,7 +56,7 @@ describe('api Integration', () => {
     */
 
     /**
-     * [ When ]
+     * [ @When ]
      */
 
     const user = await apiMockTest.login(
@@ -65,7 +65,7 @@ describe('api Integration', () => {
     );
 
     /**
-     * [ Then ]
+     * [ @Then ]
      */
 
     assertEquals(user, expectedUser);
