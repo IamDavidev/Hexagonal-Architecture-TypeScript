@@ -1,14 +1,4 @@
-import { AuthenticatedUser } from '../../app/schemas/user.schema.ts';
-
-export type AuthDetails = Pick<AuthenticatedUser, 'token' | 'refreshToken'>;
-
-// export type Permissions =
-
-export interface Permissions {
-  admin: boolean;
-  user: boolean;
-  twoFactor: boolean;
-}
+import { AuthDetails, Permissions } from '../../app/schemas/user.schema.ts';
 
 export interface ForControlAuthenticating {
   getAuthDetails: (email: string, password: string) => Promise<AuthDetails>;
