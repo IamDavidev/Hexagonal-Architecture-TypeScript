@@ -1,8 +1,5 @@
-import {
-  AuthDetails,
-  ForControlAuthenticating,
-  Permissions,
-} from '../../ports/drivens/for-control-authenticating.ts';
+import { AuthDetails, Permissions } from '../../app/schemas/user.schema.ts';
+import { ForControlAuthenticating } from '../../ports/drivens/for-control-authenticating.ts';
 
 const AuthDetailsMock: AuthDetails = {
   refreshToken: 'refreshToken',
