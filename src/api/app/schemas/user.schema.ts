@@ -38,10 +38,17 @@ export interface AuthenticatedUser {
 */
 export type AuthenticatedUser = z.infer<typeof AuthenticatedUserSchema>;
 
-// export type User = Omit<AuthenticatedUser, 'id' | 'token' | 'refreshToken'>;
-export type User = Pick<AuthenticatedUser, 'name' | 'email'>;
+/*
+export type User = Omit<AuthenticatedUser, 'id' | 'token' | 'refreshToken'>;
+export type User = Pick<AuthenticatedUser, 'name' | 'email'> & {
+  password: string;
+};
+*/
+const UserSchema = AuthenticatedUserSchema.pick({
+  email: true,
+  name: true,
+}).and(z.object({ password: z.string() }));
 
-export const UserSchema = z.object({
-  name: z.string(),
-  email: z.string().email(),
-});
+export type User = z.infer<typeof UserSchema>;
+
+// export const UserSchema =
